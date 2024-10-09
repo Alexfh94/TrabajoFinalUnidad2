@@ -1,5 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="backgroundColor">#FFF8E1</color> <!-- Un fondo cálido -->
+    <color name="titleTextColor">#212121</color> <!-- Texto oscuro para el título -->
+    <color name="userTextColor">#616161</color> <!-- Texto sutil para el usuario -->
+    <color name="inputTextColor">#000000</color> <!-- Texto dentro del EditText -->
+    <color name="hintColor">#9E9E9E</color> <!-- Color de hint más suave -->
+    <color name="buttonColor">#7E57C2</color> <!-- Color del botón de enviar -->
+    <color name="buttonTextColor">#FFFFFF</color> <!-- Texto blanco dentro del botón -->
+    <color name="purple_500">#6200EE</color>
 </resources>
