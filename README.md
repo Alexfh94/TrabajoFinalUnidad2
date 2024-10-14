@@ -32,8 +32,4 @@ En Actividad2, puedes ver el mensaje recibido y enviar uno nuevo de vuelta a Mai
 
 Continúa intercambiando mensajes entre las dos actividades.
 
-## Contribuciones
-Las contribuciones son bienvenidas. Si tienes sugerencias o mejoras, por favor abre un issue o crea un pull request.
 
-## Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
