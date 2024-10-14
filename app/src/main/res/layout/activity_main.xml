@@ -35,25 +35,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
 
-    <!-- Contenedor de los mensajes (LinearLayout) -->
-
-    <!-- Contenedor para el campo de texto y el botón de enviar -->
-    <LinearLayout
-        android:id="@+id/historialLayout"
+    <!-- Contenedor de los mensajes (ScrollView) -->
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/container_border"
-        android:orientation="vertical"
-        android:padding="8dp"
         app:layout_constraintBottom_toTopOf="@+id/inputContainer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
+        <LinearLayout
+            android:id="@+id/historialLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp" />
+    </ScrollView>
+
+    <!-- Contenedor para el campo de texto y el botón de enviar -->
     <LinearLayout
         android:id="@+id/inputContainer"
         android:layout_width="0dp"
@@ -86,6 +90,7 @@
             android:backgroundTint="@color/buttonColor"
             android:layout_marginStart="8dp"
             android:text="@string/btnText"
+            android:textSize="18sp"
             android:textColor="@color/buttonTextColor"
             android:textStyle="bold"
             android:padding="12dp"

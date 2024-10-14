@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView; // Importar ScrollView
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private LinearLayout historialLayout;
     private EditText textMsj;
+    private ScrollView scrollView; // Declarar ScrollView
     private ArrayList<String> historialMensajes;
 
     @Override
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         historialLayout = findViewById(R.id.historialLayout);
         textMsj = findViewById(R.id.textMsj);
+        scrollView = findViewById(R.id.scrollView); // Inicializar ScrollView
         historialMensajes = new ArrayList<>();
 
         Log.i("TEST", "Entrando en MainActivity.onCreate");
@@ -75,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         historialLayout.addView(mensajeView, params);
+        scrollToBottom(); // Desplazar hacia abajo después de agregar el mensaje
+    }
+
+    // Método para desplazar el ScrollView hacia abajo
+    private void scrollToBottom() {
+        scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
     }
 
     // Enviar el mensaje a Actividad2
