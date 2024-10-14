@@ -2,6 +2,7 @@ package com.example.trabajofinalunidad2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         textMsj = findViewById(R.id.textMsj);
         historialMensajes = new ArrayList<>();
 
+        Log.i("TEST", "Entrando en MainActivity.onCreate");
+
         // Recuperar historial y mensaje recibido desde Actividad2
         Intent intent = getIntent();
         String nuevoMensaje = intent.getStringExtra("mensaje");
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         // Si hay un historial, lo mostramos
         if (historial != null) {
             historialMensajes = historial; // Actualizar el historial con lo que venga de la otra actividad
+            Log.i("TEST", "Historial recibido en MainActivity: " + historialMensajes);
             for (int i = 0; i < historialMensajes.size(); i++) {
                 boolean esEnviado = (i % 2 == 0); // En MainActivity, los mensajes pares son enviados
                 añadirMensaje(historialMensajes.get(i), esEnviado);
@@ -43,12 +47,15 @@ public class MainActivity extends AppCompatActivity {
 
         // Si hay un nuevo mensaje, lo mostramos como recibido
         if (nuevoMensaje != null) {
+            Log.i("TEST", "Nuevo mensaje recibido en MainActivity: " + nuevoMensaje);
             añadirMensaje(nuevoMensaje, false); // Mostrar como recibido
         }
     }
 
     // Método para añadir mensajes al historial
     private void añadirMensaje(String mensaje, boolean enviado) {
+        Log.i("TEST", "Añadiendo mensaje en MainActivity: " + mensaje + ", enviado: " + enviado);
+
         TextView mensajeView = new TextView(this);
         mensajeView.setText(mensaje);
         mensajeView.setPadding(16, 8, 16, 8);
@@ -71,15 +78,22 @@ public class MainActivity extends AppCompatActivity {
 
     // Enviar el mensaje a Actividad2
     public void onClick(View view) {
+        Log.i("TEST", "Boton pulsado en MainActivity");
+
         String mensaje = textMsj.getText().toString();
         if (!mensaje.isEmpty()) {
             añadirMensaje(mensaje, true); // Mostrar como enviado
             historialMensajes.add(mensaje); // Agregar solo el mensaje enviado al historial
 
+            Log.i("TEST", "Enviando mensaje desde MainActivity: " + mensaje);
+            Log.i("TEST", "Historial antes de cambiar de actividad: " + historialMensajes);
+
             // Enviar el historial completo a Actividad2
             Intent launchActividad2 = new Intent(this, Actividad2.class);
             launchActividad2.putStringArrayListExtra("historial", historialMensajes);
             startActivity(launchActividad2);
+
+            Log.i("TEST", "Cambio de actividad: MainActivity -> Actividad2");
         }
     }
 }
