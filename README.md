@@ -23,9 +23,13 @@ Esta es una aplicación de chat simple para Android que permite a dos usuarios i
    
 ## Uso
 Inicia la aplicación.
+
 En MainActivity, escribe un mensaje en el campo de texto y pulsa el botón de enviar.
+
 El mensaje se mostrará en el historial y se abrirá Actividad2.
+
 En Actividad2, puedes ver el mensaje recibido y enviar uno nuevo de vuelta a MainActivity.
+
 Continúa intercambiando mensajes entre las dos actividades.
 
 ## Contribuciones
