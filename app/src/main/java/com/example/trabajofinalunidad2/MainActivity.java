@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView mensajeView = new TextView(this);
         mensajeView.setText(mensaje);
+        mensajeView.setTextSize(18);
         mensajeView.setPadding(16, 8, 16, 8);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
