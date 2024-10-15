@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Traballo Final Unidade 2</string>
+    <string name="btnText">Enviar</string>
+    <string name="txtHint">Mensaxe…</string>
+    <string name="chatHistory">Historial de mensaxes</string>
+    <string name="Usuario1">Usuario 1</string>
+    <string name="Usuario2">Usuario 2</string>
+</resources>

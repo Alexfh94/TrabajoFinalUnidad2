@@ -8,7 +8,7 @@
     android:background="@color/material_dynamic_primary90"
     tools:context=".Actividad2">
 
-    <!-- Título del historial de mensajes -->
+    <!-- Titulo del historial de mensajes -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
             android:padding="8dp" />
     </ScrollView>
 
-    <!-- Contenedor para el campo de texto y el botón de enviar -->
+    <!-- Contenedor para el campo de texto y el boton de enviar -->
     <LinearLayout
         android:id="@+id/inputContainer"
         android:layout_width="0dp"
@@ -82,7 +82,7 @@
             android:textColorHint="@color/hintColor"
             android:inputType="text" />
 
-        <!-- Botón para enviar el mensaje -->
+        <!-- Boton para enviar el mensaje -->
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"

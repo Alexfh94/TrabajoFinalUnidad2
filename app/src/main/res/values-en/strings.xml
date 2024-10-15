@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">" Final Project Unit 2"</string>
+    <string name="btnText">Send</string>
+    <string name="txtHint">Message…</string>
+    <string name="chatHistory">Message history</string>
+    <string name="Usuario1">User 1</string>
+    <string name="Usuario2">User 2</string>
+</resources>

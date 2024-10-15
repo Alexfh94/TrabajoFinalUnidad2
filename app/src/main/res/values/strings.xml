@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Trabajo Final Unidad 2</string>
     <string name="btnText">Enviar</string>
-    <string name="txtHint">Mensaje...</string>
+    <string name="txtHint">Mensaje…</string>
     <string name="chatHistory">Historial de mensajes</string>
     <string name="Usuario1">Usuario 1</string>
     <string name="Usuario2">Usuario 2</string>
